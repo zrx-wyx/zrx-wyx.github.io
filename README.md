@@ -17,6 +17,8 @@
        
     <div class="post-list">
         <div class="post-item"><a href=" blog.html">task01 我的第一篇博客</a ></div>
+         <div class="post-item"><a href="blog.html">task02 writeup</a ></div>
+        
     </div>
 </body>
 </html>
