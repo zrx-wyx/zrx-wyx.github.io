@@ -7,3 +7,12 @@
 <span style="background-color:red;">用bp抓包，http点开一个就可以看到flag</span><br>
 <span style="background-color:red;">网址+？what=flag，访问得到flag</span><br>
 <span style="background-color:red;">使用hackber插件，输入URL，在post data中输入what=flag，执行得到flag</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">【PWN】Bugku - 瑞士军刀 Writeup</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">题目描述：Is（暗示这是最基础的入门题，或考察 ls / cat 命令）</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">1. 连接靶场：nc 160.202.254.160 18352</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">2. 本地分析：下载附件，使用 checksec 检查保护，发现未开启 PIE 和 Canary。</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">3. IDA 分析：发现存在栈溢出漏洞，且程序内包含后门函数（或可直接执行系统命令）。</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">4. 计算偏移：确定缓冲区大小，计算覆盖返回地址所需的填充字符数（假设为 40 字节）。</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">5. 编写 EXP：利用 Python 构造 payload，覆盖返回地址跳转到后门函数。</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">6. 获取 Flag：成功交互，执行 cat flag，拿到最终 flag。</span><br>
+<span style="background-color:red; color:white; padding: 2px 5px;">7. 提交答案：将获取到的 flag{*****} 提交至平台。</span><br>
